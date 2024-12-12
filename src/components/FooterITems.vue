@@ -3,7 +3,7 @@
     <v-container fluid>
         <v-row justify="center">
             <v-col class="text-center">
-                <span class="white--text">&copy; 2022 Heroes of the Storm</span>
+                <span class="white--text">&copy; 2024 Heroes of the Storm</span>
             </v-col>
         </v-row>
     </v-container>
