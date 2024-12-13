@@ -15,21 +15,12 @@
         <v-table class="tablaHeroes" theme="dark">
             <thead>
                 <tr>
-                    <th class="text-left">
-                        Heroes
-                    </th>
-                    <th class="text-left">
-                        Nombre
-                    </th>
-                    <th class="text-left">
-                        Funcion
-                    </th>
-                    <th class="text-left">
-                        Titulo
-                    </th>
-                    <th class="text-left">
-                        Ataque
-                    </th>
+                    <th class="text-left">Imagen</th>
+                    <th class="text-left">Heroes</th>
+                    <th class="text-left">Nombre</th>
+                    <th class="text-left">Funcion</th>
+                    <th class="text-left">Titulo</th>
+                    <th class="text-left">Ataque</th>
                 </tr>
             </thead>
             <tbody>
@@ -235,30 +226,41 @@ export default {
     position: relative;
     /* Asegúrate de que tenga posición relativa */
 }
+
 .table-title {
     color: white;
     /*agrandar la letra*/
     font-size: 40px;
-    margin-bottom: 10px; /* Espacio entre el título y los iconos */
+    margin-bottom: 10px;
+    /* Espacio entre el título y los iconos */
 }
 
 .filter-icons i {
-    font-size: 35px; /* Tamaño de los iconos */
-    margin: 5px; /* Espacio entre los iconos */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los iconos */
-    transition: color 0.3s; /* Transición suave para el color */
+    font-size: 35px;
+    /* Tamaño de los iconos */
+    margin: 5px;
+    /* Espacio entre los iconos */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre los iconos */
+    transition: color 0.3s;
+    /* Transición suave para el color */
     color: white;
     margin-bottom: 20px;
 }
 
 .filter-icons i:hover {
-    color: #ffcc00; /* Cambia el color al pasar el mouse */
+    color: #ffcc00;
+    /* Cambia el color al pasar el mouse */
 }
 
 .tablaHeroes {
-    width: 100%; /* Asegúrate de que la tabla ocupe el 100% del ancho disponible */
-    border-collapse: collapse; /* Colapsa los bordes de la tabla */
-    margin: 0; /* Elimina el margen de la tabla */
-    padding: 0; /* Elimina el padding de la tabla */
+    width: 100%;
+    /* Asegúrate de que la tabla ocupe el 100% del ancho disponible */
+    border-collapse: collapse;
+    /* Colapsa los bordes de la tabla */
+    margin: 0;
+    /* Elimina el margen de la tabla */
+    padding: 0;
+    /* Elimina el padding de la tabla */
 }
 </style>
