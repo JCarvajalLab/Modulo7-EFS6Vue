@@ -3,6 +3,15 @@
 <v-main class="home">
     <div class="background-blur"></div>
     <div class="table-container">
+        <h2 class="table-title">Héroes</h2> <!-- Título de la tabla -->
+        <div class="filter-icons">
+            <i class="fas fa-shield-alt" title="Tanque" @click="filterByTank"></i>
+            <i class="fas fa-crosshairs" title="Asesino a distancia" @click="filterByRangedAssassin"></i>
+            <i class="fas fa-plus" title="Sanador" @click="filterByHealer"></i>
+            <i class="fas fa-sword" title="Guerrero" @click="filterByWarrior"></i>
+            <i class="fas fa-user-secret" title="Asesino" @click="filterByAssassin"></i>
+            <i class="fas fa-hand-paper" title="Apoyo" @click="filterBySupport"></i>
+        </div>
         <v-table class="tablaHeroes" theme="dark">
             <thead>
                 <tr>
@@ -215,11 +224,35 @@ export default {
 }
 
 .table-container {
-    max-height: 60vh; /* Establece la altura máxima del contenedor */
-    overflow-y: auto; /* Habilita el desplazamiento vertical */
-    margin: 20px 50px; /* Margen superior e inferior y centrado */
-    z-index: 2; /* Asegúrate de que esté por encima del fondo difuminado */
-    position: relative; /* Asegúrate de que tenga posición relativa */
+    max-height: 60vh;
+    /* Establece la altura máxima del contenedor */
+    overflow-y: auto;
+    /* Habilita el desplazamiento vertical */
+    margin: 20px 50px;
+    /* Margen superior e inferior y centrado */
+    z-index: 2;
+    /* Asegúrate de que esté por encima del fondo difuminado */
+    position: relative;
+    /* Asegúrate de que tenga posición relativa */
+}
+.table-title {
+    color: white;
+    /*agrandar la letra*/
+    font-size: 40px;
+    margin-bottom: 10px; /* Espacio entre el título y los iconos */
+}
+
+.filter-icons i {
+    font-size: 35px; /* Tamaño de los iconos */
+    margin: 5px; /* Espacio entre los iconos */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los iconos */
+    transition: color 0.3s; /* Transición suave para el color */
+    color: white;
+    margin-bottom: 20px;
+}
+
+.filter-icons i:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse */
 }
 
 .tablaHeroes {
