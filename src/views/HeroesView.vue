@@ -2,36 +2,38 @@
 <ItemsNavbar></ItemsNavbar>
 <v-main class="home">
     <div class="background-blur"></div>
-    <v-table class="tablaHeroes" theme="dark">
-        <thead>
-            <tr>
-                <th class="text-left">
-                    Heroes
-                </th>
-                <th class="text-left">
-                    Nombre
-                </th>
-                <th class="text-left">
-                    Funcion
-                </th>
-                <th class="text-left">
-                    Titulo
-                </th>
-                <th class="text-left">
-                    Ataque
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="item in desserts" :key="item.name">
-                <td><img :src="item.image" alt="Hero Image" style="width: 200px; height: auto;" /></td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.function }}</td>
-                <td>{{ item.title }}</td>
-                <td>{{ item.attack }}</td>
-            </tr>
-        </tbody>
-    </v-table>
+    <div class="table-container">
+        <v-table class="tablaHeroes" theme="dark">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        Heroes
+                    </th>
+                    <th class="text-left">
+                        Nombre
+                    </th>
+                    <th class="text-left">
+                        Funcion
+                    </th>
+                    <th class="text-left">
+                        Titulo
+                    </th>
+                    <th class="text-left">
+                        Ataque
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in desserts" :key="item.name">
+                    <td><img :src="item.image" alt="Hero Image" style="width: 200px; height: auto;" /></td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.function }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.attack }}</td>
+                </tr>
+            </tbody>
+        </v-table>
+    </div>
 </v-main>
 
 <ItemsFooter></ItemsFooter>
@@ -212,15 +214,18 @@ export default {
     /* Asegúrate de que esté detrás de la tabla */
 }
 
+.table-container {
+    max-height: 60vh; /* Establece la altura máxima del contenedor */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    margin: 20px 50px; /* Margen superior e inferior y centrado */
+    z-index: 2; /* Asegúrate de que esté por encima del fondo difuminado */
+    position: relative; /* Asegúrate de que tenga posición relativa */
+}
+
 .tablaHeroes {
-    position: relative;
-    /* Asegúrate de que la tabla tenga posición relativa */
-    z-index: 2;
-    /* Asegúrate de que esté por encima del fondo difuminado */
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
-    /**scroll */
-    
+    width: 100%; /* Asegúrate de que la tabla ocupe el 100% del ancho disponible */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    margin: 0; /* Elimina el margen de la tabla */
+    padding: 0; /* Elimina el padding de la tabla */
 }
 </style>
